@@ -1,0 +1,30 @@
+@use  "../global" as global;
+
+.c-about__title{
+    font-family: global.$f-ja;
+    font-weight: 600;
+    line-height: 2;
+
+    @include global.mq('pc') {
+        font-size: 24px;
+    }
+    @include global.mq('sp') {
+        font-size: 16px;
+    }
+
+}   
+
+.c-about__text{
+    font-family: global.$f-ja;
+    font-weight: 500;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+
+    @include global.mq('pc') {
+        font-size: 18px;
+    }
+    @include global.mq('sp') {
+        font-size: 16px;
+    }
+
+}   

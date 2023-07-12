@@ -1,0 +1,144 @@
+@use  "../global" as global;
+
+
+.p-vision__contentBox {
+    @include global.mq('sp') {
+
+        max-width: 560px;
+        margin: 0 auto;
+
+    }
+
+}
+
+
+.p-vision__content {
+    min-height: 250px;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 40px;
+    padding: 50px 20px;
+
+    @include global.mq('sp') {
+        padding: 30px;
+        & + & {
+            margin-top: 30px;
+        }
+    }
+
+
+}
+
+
+.p-vision__plan--head {
+    font-family: global.$f-ja;
+    font-weight: 600;
+    font-size: 24px;
+    width: 30%;
+    @include global.mq('sp') {
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+    }
+}
+.p-vision__plan--body {
+    font-family: global.$f-ja;
+    font-weight: 600;   
+    line-height: 1.6;
+    margin-top: 20px;
+    @include global.mq('pc') {
+        width: 550px;
+    }
+    @include global.mq('sp') {
+        margin-top: 24px;
+    }
+}
+
+.p-vision__plan--item {
+    list-style-type: disc;
+    & + & {
+        margin-top: 20px;
+    }
+}
+
+
+
+.p-vision__items {
+    padding-bottom: 120px;
+    @include global.mq('pc') {
+        padding-bottom: 100px;
+
+    }
+}
+
+.p-vision__item {
+    width: 900px;
+    max-width: 100%;
+    margin: 60px auto;
+    padding: 0 180px;
+    position: relative;
+
+    @include global.mq('sp') {
+        padding: 0 0 0 100px;
+        margin: 40px auto;
+    }
+}
+
+.p-vision__item_title {
+    font-family: global.$f-ja;
+    font-size: 20px;
+}
+
+.p-vision__item_text {
+    font-family: global.$f-ja;
+    margin-top: 10px;
+}
+
+.p-vision__item:first-child::after {
+    background: url(../../../../public/assets/img/img-ozigi.png) no-repeat center center/contain;
+}
+.p-vision__item:nth-of-type(2)::after {
+    background: url(../../../../public/assets/img/meeting_02_mono.png) no-repeat center center/contain;
+}
+
+.p-vision__item:nth-of-type(3)::after {
+    background: url(../../../../public/assets/img/img-meeting_.png) no-repeat center center/contain;
+    
+}
+.p-vision__item:nth-of-type(4)::after {
+    background: url(../../../../public/assets/img/videoediter_mono.png) no-repeat center center/contain;
+}
+.p-vision__item:nth-of-type(5)::after {
+    background: url(.././../../../public/assets/img/img-handshake.png) no-repeat center center/contain;
+}
+
+
+
+.p-vision__item:nth-of-type(2n+1)::after {
+    left: 0;
+}
+.p-vision__item:nth-of-type(2n)::after {
+    right: 0;
+
+    @include global.mq('sp') {
+        left: 0;
+
+    }
+}
+
+.p-vision__item::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include global.mq('sp') {
+        width: 80px;
+        height: 80px;
+
+    }
+}

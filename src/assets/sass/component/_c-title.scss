@@ -1,0 +1,33 @@
+@use  "../global" as global;
+
+
+.c-title__sub-page {
+    font-size: 16px;
+    letter-spacing: .2rem;
+    line-height: 34px;
+}
+
+
+.c-title__sub-page {
+    font-size: 16px;
+    letter-spacing: .2rem;
+    line-height: 34px;
+    margin-bottom: 60px;
+    font-family: global.$f-ja;
+}
+
+.c-title__sub-page::before, .c-title__sub-page::after {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 1px;
+    margin: 0 10px;
+    background-color: #333;
+    vertical-align: middle;
+
+    @include global.mq('sp') {
+        margin: 0px;
+        letter-spacing: normal;
+    }
+}
+

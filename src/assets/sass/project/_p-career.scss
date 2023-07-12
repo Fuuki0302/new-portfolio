@@ -1,0 +1,89 @@
+@use  "../global" as global;
+
+
+.p-career__flexBox {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.p-career-flex {
+    display: flex;
+
+
+    @include global.mq('sp') {
+        position: relative;
+        display: block;
+        margin-top: 20px;
+
+        & + & {
+            padding-top: 20px;
+        }
+    }
+
+}
+
+.p-career-flexInner__left {
+    font-family: global.$f-ja;
+    font-size: 18px;
+    padding-top: 20px;
+    width: 100%;
+
+
+    @include global.mq('pc') {
+        width: 15%;
+        padding-top: 35px;
+        font-size:16px;
+    }
+}
+
+.p-career-flexInner__right {
+    line-height: 1.7;
+    font-family: global.$f-ja;
+    padding-top: 20px;
+
+    @include global.mq('pc') {
+        width: 85%;
+        border-left: 2px solid #ddd;
+        padding-top: 35px;
+        padding-left: 8%;
+        position: relative;
+        font-size: 15px;
+    }
+}
+
+.c-career__text--additional {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    font-family: global.$f-ja;
+}
+
+.p-career-flexInner__right::before {    
+
+    @include global.mq('pc') {
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: global.$c-footer;
+        position: absolute;
+        top: 45px;
+        left: -8px;
+    }
+}
+
+.c-career__title {
+    font-family: global.$f-en;
+    font-size: 30px;
+    letter-spacing: .3rem;
+    line-height: 1;
+    font-weight: normal;
+    border-left: 15px solid global.$c-footer;
+    padding-left: 15px;
+    padding-right: 10px;
+    float: left;
+    margin-bottom: 60px;
+}
+
+
