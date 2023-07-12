@@ -31,22 +31,6 @@
 }
 
 
-
-.p-service__item {
-    @include global.mq('tab-down') {
-        width: 100%;
-        max-width: 560px;
-        margin: 0 auto;
-        & + & {
-            margin-top: 50px;
-        }
-    }
-    width: calc(33% - 24px * 2 / 3);
-    padding: 30px 30px 100px;
-    background: #fff;
-    border-radius: 15px;
-
-}
 .p-service__item--content {
     display: flex;
     justify-content: center ;
